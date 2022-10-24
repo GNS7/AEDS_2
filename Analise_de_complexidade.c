@@ -44,7 +44,7 @@ int main()
 			printf ("\nInsira o numero de alunos que deseja cadastrar: ");
 			scanf ("%i", &num_alunos);
 
-			p = (aluno *) malloc (num_alunos * sizeof (aluno)); //alocacao dinamica de memorai para structs
+			p = (aluno *) malloc (num_alunos * sizeof (aluno)); //alocacao dinamica de memoria para structs
 
 			for (int i = 0; i < num_alunos; i++) //loop para receber as informacoes da struct de alunos
 			{
