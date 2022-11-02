@@ -3,15 +3,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct elemento
-{
+typedef struct elemento {
   int valor;
 
   struct elemento *anterior;
 } elemento;
 
-typedef struct pilha
-{
+typedef struct pilha {
   elemento *topo;
 } pilha;
 
@@ -33,114 +31,112 @@ int main()
 
   int temp, inicio, escolha, descarte;
 
-  while (inicio != 2) // loop inicial
-  {
-    printf(
+  while (inicio != 2)// loop inicial
+    {
+      printf(
         "\n1. Criar pilha\n"
         "2. Sair\n");
 
-    scanf("%d", &inicio);
+      scanf("%d", &inicio);
 
-    switch (inicio)
-
-    {
-    case 1:
-
-      p = criaPilha(); // cria pilha (vetor e topo)
-      do               // loop de escolha
-      {
-        printf(
-            "\n1. Colocar na pilha\n"             // empilha um novo numero
-            "2. Retirar da pilha\n"               // desempilha um numero
-            "3. Conferir se a pilha esta vazia\n" //
-            "4. Conferir se a pilha esta cheia\n" // N funciona
-            "5. Liberar a pilha e sair\n"         // volta para o switch inicial
-        );
-
-        scanf("%d", &escolha);
-
-        switch (escolha)
+      switch (inicio)
 
         {
         case 1:
 
-          printf("Digite o valor que quer colocar na fila: \n");
+          p = criaPilha();// cria pilha (vetor e topo)
+          do// loop de escolha
+            {
+              printf(
+                "\n1. Colocar na pilha\n"// empilha um novo numero
+                "2. Retirar da pilha\n"// desempilha um numero
+                "3. Conferir se a pilha esta vazia\n"//
+                "4. Conferir se a pilha esta cheia\n"// N funciona
+                "5. Liberar a pilha e sair\n"// volta para o switch inicial
+                );
 
-          scanf("%d", &temp);
+              scanf("%d", &escolha);
 
-          if (emPilha(p, temp) == -1)
+              switch (escolha)
 
-          {
-            printf("A pilha esta cheia\n");
-          }
+                {
+                case 1:
 
-          else if (emPilha(p, temp) == 1)
+                  printf("Digite o valor que quer colocar na fila: \n");
 
-          {
-            printf("Numero adicionado: %i\n", temp);
-          }
+                  scanf("%d", &temp);
 
-          else
+                  if (emPilha(p, temp) == -1)
 
-          {
-            printf("Error");
-          }
+                    {
+                      printf("A pilha esta cheia\n");
+                    }
 
-          break;
+                  else if (emPilha(p, temp) == 1)
+
+                    {
+                      printf("Numero adicionado: %i\n", temp);
+                    }
+
+                  else
+
+                    {
+                      printf("Error");
+                    }
+
+                  break;
+
+                case 2:
+
+                  if (retiraPilha(p, &descarte) == -1)
+
+                    {
+                      printf("A pilha esta vazia\n");
+                    }
+
+                  else if (retiraPilha(p, &descarte) == 1)
+
+                    {
+                      printf("Numero %i retirado\n", descarte);
+                    }
+
+                  break;
+
+                case 3:
+
+                  if (pilhaVazia(p) == 1)
+                    {
+                      printf("pilha vazia\n");
+                    }
+
+                  else
+                    {
+                      printf("pilha nao vazia\n");
+                    }
+                  break;
+
+                /*case 4:
+                   if (pilhaCheia(p) == 1)
+                   {
+                   printf ("pilha cheia\n");
+                   }
+                   else
+                   {
+                   printf ("pilha nao Cheia\n");
+                   }
+                   break; */
+                case 5:
+                  liberaPilha(p);
+                  exit(0);
+                  break;
+                }
+            } while (escolha != 6);
 
         case 2:
-
-          if (retiraPilha(p, &descarte) == -1)
-
-          {
-            printf("A pilha esta vazia\n");
-          }
-
-          else if (retiraPilha(p, &descarte) == 1)
-
-          {
-            printf("Numero %i retirado\n", descarte);
-          }
-
-          break;
-
-        case 3:
-
-          if (pilhaVazia(p) == 1)
-          {
-            printf("pilha vazia\n");
-          }
-
-          else
-          {
-            printf("pilha nao vazia\n");
-          }
-          break;
-
-        /*case 4:
-           if (pilhaCheia(p) == 1)
-           {
-           printf ("pilha cheia\n");
-           }
-           else
-           {
-           printf ("pilha nao Cheia\n");
-           }
-           break; */
-        case 5:
-
-          liberaPilha(p);
-          exit(0);
-
+          return 0;
           break;
         }
-      } while (escolha != 6);
-
-    case 2:
-      return 0;
-      break;
     }
-  }
 
   return 0;
 }
@@ -160,15 +156,15 @@ void liberaPilha(pilha *p)
 {
   while (p->topo != NULL)
 
-  {
-    elemento *aux;
+    {
+      elemento *aux;
 
-    aux = p->topo;
+      aux = p->topo;
 
-    p->topo = p->topo->anterior;
+      p->topo = p->topo->anterior;
 
-    free(aux);
-  }
+      free(aux);
+    }
 
   free(p);
 }
@@ -179,49 +175,49 @@ int emPilha(pilha *p, int temp)
 
   if (novo == NULL)
 
-  {
-    printf("Erro na alocacao de memoria");
+    {
+      printf("Erro na alocacao de memoria");
 
-    system("pause");
-    return 0;
-  }
+      system("pause");
+      return 0;
+    }
 
   else
 
-  {
-    novo->valor = temp;
+    {
+      novo->valor = temp;
 
-    novo->anterior = p->topo;
+      novo->anterior = p->topo;
 
-    p->topo = novo;
+      p->topo = novo;
 
-    return 1;
-  }
+      return 1;
+    }
 }
 
 int retiraPilha(pilha *p, int *descarte)
 {
   if (pilhaVazia(p) == 1)
 
-  {
-    return -1;
-  }
+    {
+      return -1;
+    }
 
   else
 
-  {
-    *descarte = p->topo->valor;
+    {
+      *descarte = p->topo->valor;
 
-    elemento *aux;
+      elemento *aux;
 
-    aux = p->topo;
+      aux = p->topo;
 
-    p->topo = aux->anterior;
+      p->topo = aux->anterior;
 
-    free(aux);
+      free(aux);
 
-    return 1;
-  }
+      return 1;
+    }
 }
 
 // int pilhaCheia (elemento n)
@@ -240,13 +236,13 @@ int pilhaVazia(pilha *p)
 {
   if (p->topo == NULL)
 
-  {
-    return 1;
-  }
+    {
+      return 1;
+    }
 
   else
 
-  {
-    return 0;
-  }
+    {
+      return 0;
+    }
 }
