@@ -1,6 +1,19 @@
 #compressed files
 *.zip
 
+#Json
+*.json
+launch.json
+
+#XML
+*.xml
+
+#iml
+*.iml
+
+#Gitignore
+.gitignore
+
 # Prerequisites
 *.d
 
