@@ -41,7 +41,7 @@ int main() {
 					"4. Conferir se a pilha esta cheia\n" //
 					"5. Liberar a pilha\n" //
 					"6. Sair\n" //volta para o switch inicial
-          "7. Topo\n"
+          			"7. Topo\n"
 				);
 				scanf  ("%d", &escolha);
 
