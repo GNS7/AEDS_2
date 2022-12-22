@@ -48,7 +48,7 @@ int main()
     case 1:
 
       f = criaFila(); // cria fila (vetor e )
-      do               // loop de escolha
+      do              // loop de escolha
       {
         printf(
             "\n1. Colocar na fila\n"             // emfila um novo numero
@@ -129,11 +129,8 @@ int main()
            printf ("fila nao Cheia\n");
            }
            break; */
-        case 5:
-
-          liberaFila(f);
-          exit 0;
-
+        default:
+          return 0;
           break;
         }
       } while (escolha != 6);
@@ -151,7 +148,7 @@ fila *criaFila()
 {
   fila *f;
 
-  f = (fila *) malloc (sizeof(fila));
+  f = (fila *)malloc(sizeof(fila));
 
   f->comeco = NULL;
   f->fim = NULL;
@@ -178,7 +175,7 @@ void liberaFila(fila *f)
 
 int emFila(fila *f, int temp)
 {
-  elemento *novo = (elemento *) malloc (sizeof(elemento));
+  elemento *novo = (elemento *)malloc(sizeof(elemento));
 
   if (novo == NULL)
 
@@ -201,7 +198,7 @@ int emFila(fila *f, int temp)
 
     return 1;
   }
-  
+
   else
   {
     novo->valor = temp;
@@ -210,10 +207,9 @@ int emFila(fila *f, int temp)
 
     f->fim->proximo = novo;
     f->fim = novo;
-    
+
     return 1;
   }
-
 }
 
 int retiraFila(fila *f, int *descarte)
@@ -255,7 +251,7 @@ int retiraFila(fila *f, int *descarte)
 
 int filaVazia(fila *f)
 {
-  if (f->comeco == NULL )
+  if (f->comeco == NULL)
 
   {
     return 1;
