@@ -19,6 +19,9 @@ int inserirItem(Lista *lista, int valor);
 int inserirItemPosicao(Lista *lista, int valor, int posicao);
 int removerItem(Lista *lista, int *valor);
 int removerItemPosicao(Lista *lista, int *valor, int posicao);
+int contarItem(Lista *lista);
+int recuperarItem(Lista *lista, int valor);
+int recuperarPosicao(Lista *lista, int posicao);
 void imprimirLista(Lista *lista);
 
 int main()
@@ -49,13 +52,14 @@ int main()
             do // loop de escolha
             {
                 printf(
-                    "\n1. Colocar na lista\n"              // emlista um novo numero"
+                    "\n1. Colocar na lista\n"              // emlista um novo numero
                     "2. Colocar na lista em uma posicao\n" // emlista um novo numero em uma posicao que o usuario escolher
                     "3. Retirar da lista\n"                // desemlista um numero
                     "4. Retirar da lista em uma posicao\n" // desemlista um numero em uma posicao que o usuario escolher
-                    "3. Conferir se a lista esta vazia\n"  //
-                    "4. Conferir se a lista esta cheia\n"  // N funciona
-                    "5. Liberar a lista e sair\n"          // libera e sai do programa
+                    "5. Buscar (valor)\n"                  // Busca por valor e retorna a posicao
+                    "6. Buscar (posicao)\n"                // Busca por posicao e retorna o valor
+                    "7. Contar elementos\n"                // conta quantos elementos tem na lista
+                    "8. Liberar e sair"                    // libera e sai do programa
                 );
 
                 scanf("%d", &escolha);
@@ -154,8 +158,76 @@ int main()
                     }
                     break;
 
+                case 5:
+                    printf("Digite o valor que quer achar na lista: \n");
+                    scanf("%d", &temp);
+
+                    int conferir = recuperarItem(lista, temp);
+
+                    if (conferir == 0)
+                    {
+                        printf("A lista esta vazia\n");
+                    }
+                    else if (conferir > 0)
+                    {
+                        printf("Numero %d encontrado na posicao %d\n", temp, conferir);
+                        imprimeLista(lista);
+                    }
+                    else
+                    {
+                        printf("Error");
+                    }
+                    break;
+
+                case 6:
+                    printf("Digite a posicao que quer achar na lista: \n");
+                    scanf("%d", &posicao);
+
+                    int conferirPosicao = recuperarPosicao(lista, posicao);
+
+                    if (conferirPosicao == 0)
+                    {
+                        printf("A lista esta vazia\n");
+                    }
+                    else if (conferirPosicao > 0)
+                    {
+                        printf("Numero %d encontrado na posicao %d\n", conferirPosicao, posicao);
+                        imprimeLista(lista);
+                    }
+                    else
+                    {
+                        printf("Error");
+                    }
+                    break;
+
+                case 7:
+                    int contar = contarItem(lista);
+
+                    if (contar == 0)
+                    {
+                        printf("A lista esta vazia\n");
+                    }
+                    else if (contar > 0)
+                    {
+                        printf("A lista tem %d numeros\n", contar);
+                        imprimeLista(lista);
+                    }
+                    else
+                    {
+                        printf("Error");
+                    }
+                    break;
+
+                case 8:
+                    limpaLista(lista);
+                    free(lista);
+                    return 0;
+                    break;
+
                 default:
                     printf("Opcao invalida\n");
+                    limpaLista(lista);
+                    free(lista);
                     return 0;
                     break;
                 }
@@ -198,9 +270,7 @@ int inserirItem(Lista *l, int valor)
     novo->proximo = NULL;
 
     if (l->inicio == NULL)
-    {
         l->inicio = novo;
-    }
     else
     {
         aux = l->inicio;
@@ -233,7 +303,7 @@ int inserirItemPosicao(Lista *l, int valor, int posicao) ///////////////////////
         aux = l->inicio;
         while (aux->proximo != NULL) // percorre a lista até o final
         {
-            if (count == posicao - 2) // se a posicao for igual a posicao que o usuario escolheu4
+            if (count == posicao - 2) // se a posicao for igual a posicao que o usuario escolheu
             {
                 novo->proximo = aux->proximo;
                 aux->proximo = novo;
@@ -243,8 +313,9 @@ int inserirItemPosicao(Lista *l, int valor, int posicao) ///////////////////////
             count++;
         }
         aux->proximo = novo; // se a posicao for maior que o tamanho da lista, adiciona na ultima posicao
+        return 1;
     }
-    return 1;
+    return -1;
 }
 
 int removerItem(Lista *l, int *valor)
@@ -310,21 +381,78 @@ int removerItemPosicao(Lista *l, int *valor, int posicao)
     }
 
     free(aux);
-    return 1;
+    return -1;
 }
 
-int listaVazia(Lista *l)
-{
-    if (l->inicio == NULL)
-        return 1;
-    else
-        return 0;
-}
-
-void imprimeLista(Lista *l)
+int contarItem(Lista *lista)
 {
     Elemento *aux;
-    aux = l->inicio;
+    int count = 0;
+
+    if (lista->inicio == NULL) // verifica se a lista esta vazia
+        return 0;
+
+    aux = lista->inicio;
+    while (aux->proximo != NULL) // percorre a lista até o final
+    {
+        aux = aux->proximo;
+        count++;
+    }
+    count++; // Compensa o inicio em 0
+    return count;
+}
+
+int recuperarItem(Lista *lista, int valor)
+{
+    Elemento *aux, *last;
+    int count = 0;
+
+    if (lista->inicio == NULL) // verifica se a lista esta vazia
+        return 0;
+
+    aux = lista->inicio;
+    while (aux != NULL) // percorre a lista até o final
+    {
+        if (aux->valor == valor)
+        {
+            count++; // Compensa o inicio em 0
+            return count;
+        }
+
+        printf("AUX-valor=%d\nValor=%d", aux->valor, valor);
+
+        aux = aux->proximo;
+        count++;
+    }
+
+    return -1;
+}
+
+int recuperarPosicao(Lista *lista, int posicao)
+{
+    Elemento *aux, *last;
+    int count = 0;
+
+    if (lista->inicio == NULL) // verifica se a lista esta vazia
+        return 0;
+
+    aux = lista->inicio;
+    while (aux != NULL) // percorre a lista até o final
+    {
+        if (count == posicao - 1)
+            return aux->valor;
+
+        aux = aux->proximo;
+        count++;
+    }
+
+    return -1;
+}
+
+void imprimeLista(Lista *lista)
+{
+    Elemento *aux;
+    aux = lista->inicio;
     while (aux != NULL)
     {
         printf("%d\n", aux->valor);
