@@ -1,0 +1,433 @@
+Arquivo criado com sucesso
+Lista de jogadores criada com sucesso
+Baralho criado com sucesso
+Sucesso ao criar as cartas
+Sucesso ao criar a mesa
+
+NOVA RODADA
+Cartas adicionadas com sucesso
+Cartas construidas com sucesso
+Cartas distribuidas com sucesso
+Espaco alocado com sucesso
+numero de cartas na mao: 5
+soma_turnos: 1
+soma_turnos: 2
+soma_turnos: 3
+soma_turnos: 4
+soma_turnos: 5
+soma_turnos: 6
+soma_turnos: 7
+soma_turnos: 8
+
+Jogador f: 2 de Ouros, 
+
+Jogador g: 5 de Paus, 
+
+Jogador h: Rei de Ouros, 
+
+Jogador ds: 2 de Paus, 
+
+Jogador gh: Dama de Ouros, 
+
+Jogador fdsg: Rei de Espadas, 
+
+Jogador h: 5 de Espadas, 
+
+Jogador df: 7 de Espadas, 
+
+Vencedor do turno: ds 
+
+Jogador f: As de Ouros,
+
+Jogador g: As de Copas,
+
+Jogador h: 6 de Copas, 
+
+Jogador ds: 7 de Ouros, 
+
+Jogador gh: 6 de Ouros, 
+
+Jogador fdsg: 3 de Copas, 
+
+Jogador h: 4 de Ouros, 
+
+Jogador df: Dama de Espadas, 
+
+Vencedor do turno: ds 
+
+Jogador f: 4 de Copas, 
+
+Jogador g: Dama de Paus, 
+
+Jogador h: As de Espadas,
+
+Jogador ds: 2 de Espadas, 
+
+Jogador gh: 3 de Paus, 
+
+Jogador fdsg: Dama de Copas, 
+
+Jogador h: Rei de Copas, 
+
+Jogador df: 3 de Espadas, 
+
+Vencedor do turno: h 
+
+Jogador f: Valete de Paus, 
+
+Jogador g: 2 de Copas, 
+
+Jogador h: As de Paus,
+
+Jogador ds: 6 de Paus, 
+
+Jogador gh: 4 de Paus, 
+
+Jogador fdsg: 6 de Espadas, 
+
+Jogador h: 3 de Ouros, 
+
+Jogador df: 5 de Ouros, 
+
+Vencedor do turno: gh 
+
+Jogador f: 5 de Copas, 
+
+Jogador g: 7 de Copas, 
+
+Jogador h: Rei de Paus, 
+
+Jogador ds: 4 de Espadas, 
+
+Jogador gh: Valete de Ouros, 
+
+Jogador fdsg: Valete de Copas, 
+
+Jogador h: 7 de Paus, 
+
+Jogador df: Valete de Espadas, 
+
+Vencedor do turno: g 
+
+NOVA RODADA
+Cartas adicionadas com sucesso
+Cartas construidas com sucesso
+Cartas distribuidas com sucesso
+Espaco alocado com sucesso
+numero de cartas na mao: 4
+soma_turnos: 1
+soma_turnos: 2
+soma_turnos: 3
+soma_turnos: 4
+soma_turnos: 5
+soma_turnos: 6
+soma_turnos: 7
+soma_turnos: 8
+
+Jogador f: 4 de Copas, 
+
+Jogador g: 7 de Copas, 
+
+Jogador h: 5 de Espadas, 
+
+Jogador ds: 6 de Espadas, 
+
+Jogador gh: As de Copas,
+
+Jogador fdsg: 4 de Ouros, 
+
+Jogador h: 3 de Copas, 
+
+Jogador df: 2 de Espadas, 
+
+Vencedor do turno: g 
+
+Jogador f: Rei de Espadas, 
+
+Jogador g: Valete de Ouros, 
+
+Jogador h: 3 de Espadas, 
+
+Jogador ds: 3 de Ouros, 
+
+Jogador gh: 5 de Paus, 
+
+Jogador fdsg: 7 de Ouros, 
+
+Jogador h: 6 de Copas, 
+
+Jogador df: Dama de Espadas, 
+
+Vencedor do turno: fdsg 
+
+Jogador f: Valete de Espadas, 
+
+Jogador g: 6 de Ouros, 
+
+Jogador h: As de Ouros,
+
+Jogador ds: Valete de Paus, 
+
+Jogador gh: Dama de Copas, 
+
+Jogador fdsg: Dama de Ouros, 
+
+Jogador h: 2 de Copas, 
+
+Jogador df: 4 de Espadas, 
+
+Vencedor do turno: h 
+
+Jogador f: As de Espadas,
+
+Jogador g: 4 de Paus, 
+
+Jogador h: 5 de Copas, 
+
+Jogador ds: As de Paus,
+
+Jogador gh: Dama de Paus, 
+
+Jogador fdsg: Rei de Copas, 
+
+Jogador h: Rei de Ouros, 
+
+Jogador df: 5 de Ouros, 
+
+Vencedor do turno: g 
+
+NOVA RODADA
+Cartas adicionadas com sucesso
+Cartas construidas com sucesso
+Cartas distribuidas com sucesso
+Espaco alocado com sucesso
+numero de cartas na mao: 3
+soma_turnos: 1
+soma_turnos: 2
+soma_turnos: 3
+soma_turnos: 4
+soma_turnos: 5
+soma_turnos: 6
+soma_turnos: 7
+soma_turnos: 8
+
+Jogador f: As de Ouros,
+
+Jogador g: 7 de Ouros, 
+
+Jogador h: Valete de Ouros, 
+
+Jogador ds: Valete de Copas, 
+
+Jogador gh: Dama de Copas, 
+
+Jogador fdsg: As de Paus,
+
+Jogador h: 6 de Copas, 
+
+Jogador df: 2 de Copas, 
+
+Vencedor do turno: g 
+
+Jogador f: 5 de Copas, 
+
+Jogador g: 3 de Ouros, 
+
+Jogador h: 7 de Paus, 
+
+Jogador ds: 3 de Paus, 
+
+Jogador gh: 6 de Espadas, 
+
+Jogador fdsg: Rei de Copas, 
+
+Jogador h: As de Copas,
+
+Jogador df: 6 de Paus, 
+
+Vencedor do turno: ds 
+
+Jogador f: 3 de Espadas, 
+
+Jogador g: 4 de Paus, 
+
+Jogador h: 4 de Copas, 
+
+Jogador ds: Valete de Espadas, 
+
+Jogador gh: Rei de Espadas, 
+
+Jogador fdsg: Dama de Espadas, 
+
+Jogador h: 2 de Ouros, 
+
+Jogador df: 3 de Copas, 
+
+Vencedor do turno: g 
+
+NOVA RODADA
+Cartas adicionadas com sucesso
+Cartas construidas com sucesso
+Cartas distribuidas com sucesso
+Espaco alocado com sucesso
+numero de cartas na mao: 2
+soma_turnos: 1
+soma_turnos: 2
+soma_turnos: 3
+soma_turnos: 4
+soma_turnos: 5
+soma_turnos: 6
+soma_turnos: 7
+soma_turnos: 8
+
+Jogador f: Rei de Espadas, 
+
+Jogador g: 4 de Copas, 
+
+Jogador h: 6 de Paus, 
+
+Jogador ds: 2 de Paus, 
+
+Jogador gh: 3 de Copas, 
+
+Jogador fdsg: 5 de Paus, 
+
+Jogador h: Rei de Paus, 
+
+Jogador df: 6 de Copas, 
+
+Vencedor do turno: gh 
+
+Jogador f: Rei de Ouros, 
+
+Jogador g: Dama de Ouros, 
+
+Jogador h: As de Paus,
+
+Jogador ds: Rei de Copas, 
+
+Jogador gh: 6 de Espadas, 
+
+Jogador fdsg: As de Espadas,
+
+Jogador h: 5 de Ouros, 
+
+Jogador df: Dama de Espadas, 
+
+Vencedor do turno: fdsg 
+
+NOVA RODADA
+Cartas adicionadas com sucesso
+Cartas construidas com sucesso
+Cartas distribuidas com sucesso
+Espaco alocado com sucesso
+numero de cartas na mao: 1
+soma_turnos: 1
+soma_turnos: 2
+soma_turnos: 3
+soma_turnos: 4
+soma_turnos: 5
+soma_turnos: 6
+soma_turnos: 7
+soma_turnos: 8
+
+Jogador f: 2 de Ouros, 
+
+Jogador g: As de Copas,
+
+Jogador h: 2 de Copas, 
+
+Jogador ds: Rei de Espadas, 
+
+Jogador gh: 5 de Ouros, 
+
+Jogador fdsg: Dama de Ouros, 
+
+Jogador h: 5 de Paus, 
+
+Jogador df: Rei de Paus, 
+
+Vencedor do turno: h 
+f - Eliminado 
+df - Eliminado 
+
+NOVA RODADA
+Cartas adicionadas com sucesso
+Cartas construidas com sucesso
+Cartas distribuidas com sucesso
+Espaco alocado com sucesso
+numero de cartas na mao: 2
+soma_turnos: 1
+soma_turnos: 2
+soma_turnos: 3
+soma_turnos: 4
+soma_turnos: 5
+soma_turnos: 6
+
+Jogador df: 2 de Copas, 
+
+Jogador g: 2 de Ouros, 
+
+Jogador h: Valete de Ouros, 
+
+Jogador ds: Valete de Espadas, 
+
+Jogador gh: Rei de Copas, 
+
+Jogador fdsg: Dama de Copas, 
+
+Vencedor do turno: df 
+
+Jogador df: As de Espadas,
+
+Jogador g: 5 de Paus, 
+
+Jogador h: As de Ouros,
+
+Jogador ds: 3 de Ouros, 
+
+Jogador gh: Dama de Espadas, 
+
+Jogador fdsg: As de Paus,
+
+Vencedor do turno: df 
+df - Eliminado 
+g - Eliminado 
+ds - Eliminado 
+
+NOVA RODADA
+Cartas adicionadas com sucesso
+Cartas construidas com sucesso
+Cartas distribuidas com sucesso
+Espaco alocado com sucesso
+numero de cartas na mao: 3
+soma_turnos: 1
+soma_turnos: 2
+soma_turnos: 4
+
+Jogador fdsg: Dama de Copas, 
+
+Jogador gh: 3 de Ouros, 
+
+Jogador h: As de Paus,
+
+Vencedor do turno: gh 
+
+Jogador fdsg: As de Ouros,
+
+Jogador gh: Rei de Copas, 
+
+Jogador h: 6 de Copas, 
+
+Vencedor do turno: fdsg 
+
+Jogador fdsg: As de Copas,
+
+Jogador gh: 2 de Espadas, 
+
+Jogador h: Valete de Espadas, 
+
+Vencedor do turno: gh 
+gh - Eliminado 
+h - Eliminado 
+Vencedor: fdsg com 1 vidas
