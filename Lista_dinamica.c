@@ -82,7 +82,7 @@ int main()
                     else if (inserir == 1)
                     {
                         printf("Numero adicionado: %i\n", temp);
-                        imprimeLista(lista);
+                        imprimirLista(lista);
                     }
                     else
                     {
@@ -109,7 +109,7 @@ int main()
                     else if (inserirPosicao == 1)
                     {
                         printf("Numero adicionado: %i\n", temp);
-                        imprimeLista(lista);
+                        imprimirLista(lista);
                     }
                     else
                     {
@@ -129,7 +129,7 @@ int main()
                     else if (remover == 1)
                     {
                         printf("Numero %d retirado\n", descarte);
-                        imprimeLista(lista);
+                        imprimirLista(lista);
                     }
                     else
                     {
@@ -150,7 +150,7 @@ int main()
                     else if (removerPosicao == 1)
                     {
                         printf("Numero %d retirado\n", descarte);
-                        imprimeLista(lista);
+                        imprimirLista(lista);
                     }
                     else
                     {
@@ -171,7 +171,7 @@ int main()
                     else if (conferir > 0)
                     {
                         printf("Numero %d encontrado na posicao %d\n", temp, conferir);
-                        imprimeLista(lista);
+                        imprimirLista(lista);
                     }
                     else
                     {
@@ -192,7 +192,7 @@ int main()
                     else if (conferirPosicao > 0)
                     {
                         printf("Numero %d encontrado na posicao %d\n", conferirPosicao, posicao);
-                        imprimeLista(lista);
+                        imprimirLista(lista);
                     }
                     else
                     {
@@ -210,7 +210,7 @@ int main()
                     else if (contar > 0)
                     {
                         printf("A lista tem %d numeros\n", contar);
-                        imprimeLista(lista);
+                        imprimirLista(lista);
                     }
                     else
                     {
@@ -449,7 +449,7 @@ int recuperarPosicao(Lista *lista, int posicao)
     return -1;
 }
 
-void imprimeLista(Lista *lista)
+void imprimirLista(Lista *lista)
 {
     Elemento *aux;
     aux = lista->inicio;
